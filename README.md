@@ -32,6 +32,7 @@ The application accepts four assessment marks, validates the input, calculates t
 | [Dockerfile](Dockerfile) | Multi-stage container build |
 | [.dockerignore](.dockerignore) | Docker build exclusions |
 | [docs/CLI-GUIDE.md](docs/CLI-GUIDE.md) | Command-line and Docker guidance |
+| [CNA261 portfolio report](docs/CNA261_Student_Qualifier_Portfolio_Report.pdf) | Sanitised PDF edition of the original assignment report |
 | [evidence/](evidence/) | Selected execution evidence |
 
 ## Run with .NET 8
