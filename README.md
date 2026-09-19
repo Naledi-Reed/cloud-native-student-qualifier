@@ -4,6 +4,8 @@
 
 **A buildable C#/.NET 8 console application packaged with Docker**
 
+[![Build .NET project](https://github.com/Naledi-Reed/cloud-native-student-qualifier/actions/workflows/dotnet.yml/badge.svg)](https://github.com/Naledi-Reed/cloud-native-student-qualifier/actions/workflows/dotnet.yml)
+
 [![Source](https://img.shields.io/badge/OPEN_C%23_SOURCE-B6FF00?style=for-the-badge&logo=dotnet&logoColor=07110D)](src/Program.cs)
 [![Project File](https://img.shields.io/badge/OPEN_PROJECT_FILE-101820?style=for-the-badge&logo=dotnet&logoColor=B6FF00)](src/StudentQualificationApp.csproj)
 [![Download](https://img.shields.io/badge/DOWNLOAD_COMPLETE_PROJECT-B6FF00?style=for-the-badge&logo=github&logoColor=07110D)](https://github.com/Naledi-Reed/cloud-native-student-qualifier/archive/refs/heads/main.zip)
