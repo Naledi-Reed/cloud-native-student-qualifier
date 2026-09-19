@@ -1,20 +1,18 @@
-# Cloud Native Student Qualifier
+<div align="center">
 
-**Module:** CNA261 — Cloud Native Programming  
-**Portfolio role:** Cloud/containerisation evidence
+# ☁️ Cloud Native Student Qualifier
 
-## What I built
+**A buildable C#/.NET 8 console application packaged with Docker**
 
-A C# console application that calculates a student's weighted assessment average and determines whether the student qualifies to write an exam. The supplied project evidence then shows the application being containerised and demonstrated through Docker CLI workflows.
+[![Source](https://img.shields.io/badge/OPEN_C%23_SOURCE-B6FF00?style=for-the-badge&logo=dotnet&logoColor=07110D)](src/Program.cs)
+[![Project File](https://img.shields.io/badge/OPEN_PROJECT_FILE-101820?style=for-the-badge&logo=dotnet&logoColor=B6FF00)](src/StudentQualificationApp.csproj)
+[![Download](https://img.shields.io/badge/DOWNLOAD_COMPLETE_PROJECT-B6FF00?style=for-the-badge&logo=github&logoColor=07110D)](https://github.com/Naledi-Reed/cloud-native-student-qualifier/archive/refs/heads/main.zip)
 
-## Repository contents
+</div>
 
-- `src/Program.cs` — cleaned source representation based on the supplied project evidence
-- `Dockerfile` — portfolio container build
-- `docs/CLI-GUIDE.md` — Docker CLI usage
-- `evidence/` — selected visual evidence from the project, added during portfolio curation
+## What it does
 
-## Weighted calculation
+The application accepts four assessment marks, validates the input, calculates the weighted semester result and reports whether the student qualifies to write the exam.
 
 | Assessment | Weight |
 |---|---:|
@@ -23,10 +21,46 @@ A C# console application that calculates a student's weighted assessment average
 | Assignment 1 | 10% |
 | Project | 10% |
 
+## Actual project files
+
+| File | Purpose |
+|---|---|
+| [src/Program.cs](src/Program.cs) | Complete application logic and validation |
+| [src/StudentQualificationApp.csproj](src/StudentQualificationApp.csproj) | Buildable .NET 8 project definition |
+| [Dockerfile](Dockerfile) | Multi-stage container build |
+| [.dockerignore](.dockerignore) | Docker build exclusions |
+| [docs/CLI-GUIDE.md](docs/CLI-GUIDE.md) | Command-line and Docker guidance |
+| [evidence/](evidence/) | Selected execution evidence |
+
+## Run with .NET 8
+
+```bash
+dotnet restore src/StudentQualificationApp.csproj
+dotnet run --project src/StudentQualificationApp.csproj
+```
+
+Marks can also be supplied as arguments:
+
+```bash
+dotnet run --project src/StudentQualificationApp.csproj -- 65 70 80 75
+```
+
+## Run with Docker
+
+```bash
+docker build -t student-qualifier .
+docker run --rm student-qualifier 65 70 80 75
+```
+
+For interactive input:
+
+```bash
+docker run --rm -it student-qualifier
+```
+
 ## What this demonstrates
 
-`C# → application logic → container image → registry workflow → CLI execution`
+C# application logic • input validation • weighted calculations • .NET builds • multi-stage Docker builds • CLI execution • technical documentation
 
-## Portfolio note
-
-The raw academic submissions are intentionally not published here. This folder is the cleaned, public-facing version of the project with sensitive student/group information removed or avoided.
+**Module origin:** CNA261 — Cloud Native Programming  
+**Status:** Runnable portfolio project with source and build files
